@@ -112,8 +112,7 @@
             <h2 class="text-primary">About</h2>
           </div>
           <br />
-          <br />
-          <ul class="ul-check list-unstyled success padding-mobile-1">
+          <ul class="ul-check list-unstyled success mobile-list">
             <li>Hypertensive disorders in pregnancy, which include gestational hypertension, chronic hypertension and
               pre-eclampsia complicate nearly 10% of pregnancies and confer risk to the health of mother and foetus.
             </li>
@@ -163,7 +162,7 @@
           </div>
           <div class="row justify-content-center mb-5 pt-5">
             <div class="col-lg-6 col-md-12 col-sm-12">
-              <ul class="ul-check list-unstyled success" style="margin-top: 20px;">
+              <ul class="ul-check list-unstyled success mobile-list" style="margin-top: 20px;">
                 <li>A non-invasive device that is constantly in contact with the finger to provide continuous and
                   accurate
                   measurement of blood pressure.
@@ -176,18 +175,18 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-mobile-flex justify-content-mobile-center">
               <img id="product-image-1" src="https://ik.imagekit.io/fayette/images/product-image-1.jpg"
-                alt="product-image" class="padding-mobile-2" />
+                alt="product-image" />
             </div>
           </div>
-          <div class="row justify-content-center align-items-center mb-5">
-            <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-4 col-md-6 col-sm-12 d-mobile-flex justify-content-mobile-center">
               <img id="mockup-phone" src="https://ik.imagekit.io/fayette/images/mockup-phone.jpg" alt="product-image"
                 style="width: 75%;" />
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <ul class="ul-check list-unstyled success" id="features-list">
+            <div class="col-lg-4 col-md-6 col-sm-12 d-mobile-flex justify-content-mobile-center">
+              <ul class="ul-check list-unstyled success mobile-list" id="features-list">
                 <li>Universal Fit (Ergonomic)</li>
                 <li>Coloured Display (OLED)</li>
                 <li>In-built Memory (for 18 days)</li>
@@ -198,8 +197,8 @@
                 <li>Plug and Play Device Capabilities</li>
               </ul>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <img class="padding-mobile-2" id="product-image-2"
+            <div class="col-lg-4 col-md-12 mt-md-5 col-sm-12 flex-mobile-column d-mobile-flex align-items-mobile-center">
+              <img id="product-image-2"
                 src="https://ik.imagekit.io/fayette/images/product-image-2.jpg" alt="product-image" />
               <h3 class="text-center text-black-50" style="font-size: 12px; padding-top: 20px; font-size: 18px;">First
                 Prototype</h3>
@@ -706,6 +705,9 @@
     </div>
   </footer>
 
+  <!-- scroll to top button -->
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
@@ -720,6 +722,20 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
+  
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 760) {
+        $('#scroll').fadeIn();
+      } else {
+        $('#scroll').fadeOut();
+      }
+    });
+    $('#scroll').click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+    });
+  </script>
 
 </body>
 
