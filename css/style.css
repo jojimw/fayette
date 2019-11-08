@@ -1442,3 +1442,48 @@ div#section-carousel {
 #carousel-header {
   padding-bottom: 2em;
 }
+
+#product-image-2,
+#product-image-2 + h3 {
+  width: 75%;    
+}
+
+#product-image-1 {
+  width: 75%;
+  margin-left: 55px;
+}
+
+@media screen and (max-width: 767px) {
+  .padding-mobile-2 {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .padding-mobile-1 {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  #features-list {
+    width: 60%;
+    margin: 60px auto;
+  }
+
+  #product-image-2,
+  #product-image-2 + h3 {
+    width: 100%;
+  }
+
+  #mockup-phone {
+    margin-top: 1.5rem;
+  }
+
+  #product-image-1 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .site-logo img {
+    padding-top: 1rem;
+  }
+}
