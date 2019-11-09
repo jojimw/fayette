@@ -28,12 +28,28 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="css/loader.css">
+
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="shortcut icon" type="image/x-icon" href="https://www.fayetteinnovations.com/favicon.ico">
 
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+  <div class="loader-wrapper">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
   <!-- header nav toggle menu-->
   <div class="site-mobile-menu site-navbar-target">
@@ -197,9 +213,10 @@
                 <li>Plug and Play Device Capabilities</li>
               </ul>
             </div>
-            <div class="col-lg-4 col-md-12 mt-md-5 col-sm-12 flex-mobile-column d-mobile-flex align-items-mobile-center">
-              <img id="product-image-2"
-                src="https://ik.imagekit.io/fayette/images/product-image-2.jpg" alt="product-image" />
+            <div
+              class="col-lg-4 col-md-12 mt-md-5 col-sm-12 flex-mobile-column d-mobile-flex align-items-mobile-center">
+              <img id="product-image-2" src="https://ik.imagekit.io/fayette/images/product-image-2.jpg"
+                alt="product-image" />
               <h3 class="text-center text-black-50" style="font-size: 12px; padding-top: 20px; font-size: 18px;">First
                 Prototype</h3>
             </div>
@@ -722,7 +739,16 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-  
+
+  <script>
+    $(window).load(function () {
+      // Animate loader off screen
+      $(".loader-wrapper").fadeOut("slow");
+      $(".loader-wrapper").hide()
+      $('body').hide().css({ marginTop: "50px", opacity: 0 }).show().animate({ marginTop: '0', opacity: 1 }, 500)
+    });
+  </script>
+
   <script>
     $(window).scroll(function () {
       if ($(this).scrollTop() > 760) {
