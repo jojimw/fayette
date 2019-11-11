@@ -749,7 +749,7 @@
 
   <script>
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 760) {
+      if ($(this).scrollTop() > $(this).innerHeight()) {
         $('#scroll').fadeIn();
       } else {
         $('#scroll').fadeOut();
